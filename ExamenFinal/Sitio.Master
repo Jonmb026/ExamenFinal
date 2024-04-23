@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Sitio.master.cs" Inherits="ExamenFinal.Sitio" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title></title>
+    <style>
+        body {
+            background-image: url('Imagen/Fondo.jpg');
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        ul li a {
+            color: blue; /* Cambiar el color del texto a blanco */
+            text-decoration: none;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <ul style="float: right; margin-top: 10px; margin-right: 10px;">
+                <li>
+                    <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
+                </li>
+                <li>
+                    <asp:Button ID="btnCerrarSesion" runat="server" Text="Cerrar Sesión" OnClick="btnCerrarSesion_Click" />
+                </li>
+            </ul>
+            <ul>
+                <li><a href="Menuprincipal.aspx">Menuprincipal</a></li>
+                <li><a href="Agente_Vista.aspx">Agentes</a></li>
+                <li><a href="Clientes_View.aspx">Clientes</a></li>
+                <li><a href="Venta_View.aspx">Venta</a></li>
+                <li><a href="Casas.aspx">Casas</a></li>
+                <li><a href="Reportes.aspx">Reportes</a></li>
+                <li><a href="Login.aspx">Login</a></li>
+            </ul>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
